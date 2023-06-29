@@ -13,7 +13,6 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
 @Getter
 public class Board extends AuditingFields {
 
@@ -25,8 +24,11 @@ public class Board extends AuditingFields {
     private String name;
 
     @Column
+    @Setter
     private String title;
+
     @Column
+    @Setter
     private String content;
 
     @OneToMany( mappedBy = "board", cascade = CascadeType.ALL)

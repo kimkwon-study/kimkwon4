@@ -42,4 +42,5 @@ public class Comment extends AuditingFields {
         return new Comment(request.content(), board, name);
     }
 
+
 }

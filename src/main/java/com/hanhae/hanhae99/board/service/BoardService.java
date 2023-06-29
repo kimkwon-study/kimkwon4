@@ -64,7 +64,6 @@ public class BoardService {
         }
 
         return Board.changeEntity(board);
-
     }
 
     public String deleteBoard(Long id,  User user) {

@@ -55,7 +55,7 @@ public class BoardController {
     }
 
     @DeleteMapping("/{id}")
-    public JsonResponse<String> update(
+    public JsonResponse<String> delete(
             @PathVariable("id") String id,
             @AuthenticationPrincipal UserDetailsImpl userDetails
     ) {

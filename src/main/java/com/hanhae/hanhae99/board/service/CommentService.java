@@ -45,6 +45,7 @@ public class CommentService {
         Comment comment = commentRepository.findById(commentPid).orElseThrow(() -> {
             throw new CustomException(ErrorCode.WRONG_COMMENT_PID);
         });
+
         if(checkAuthority(comment, userDetails)){
             comment.setContent(commentRequest.content());
         }
@@ -74,6 +75,10 @@ public class CommentService {
             }
         }
         return true;
+    }
+
+    public void setAll(Comment comment, CommentRequest req){
+        comment.setContent(req.content());
     }
 
 }
